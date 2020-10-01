@@ -1,0 +1,321 @@
+/* =====================general===================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  height: 866px;
+  background: #f3f5f7;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.font-tabel {
+  /* title-small */
+
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  letter-spacing: -0.05em;
+
+  /* text-primary */
+
+  color: #3a4f62;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pointer:hover {
+  background-color: #0b93a2;
+}
+
+.only-pointer {
+  cursor: pointer;
+}
+
+.margin-b {
+  margin-bottom: 30px;
+}
+
+.margin-l {
+  margin-left: -45px;
+}
+
+.margin-t {
+  margin-top: 15px;
+}
+
+.inline-text {
+  white-space: nowrap;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* =====================sidenav===================== */
+.sidenav {
+  height: 866px;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+
+  background-color: #333951;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.logo {
+  width: 144px;
+  height: 25px;
+  margin: 0px 20px 3px;
+}
+
+.apotek-text {
+  /* Apotek Rizal */
+
+  width: 103px;
+  margin: 0px 20px 14px;
+
+  /* large em */
+
+  font-family: Nunito Sans;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+
+  /* identical to box height, or 178% */
+
+  display: flex;
+  align-items: center;
+
+  /* text-inverted */
+
+  color: #ffffff;
+}
+
+.eclipse {
+  /* Ellipse */
+
+  width: 32px;
+  height: 32px;
+  margin: 8px 20px 24px;
+}
+
+.username {
+  /* Rizal */
+
+  width: 32px;
+  height: 24px;
+  margin: 8px -12px 24px;
+
+  /* medium strong */
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: center;
+
+  /* text-inverted */
+
+  color: #ffffff;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 1;
+  align-self: center;
+  flex-grow: 0;
+}
+
+.pos {
+  /* icons/nav/pos */
+
+  width: 24px;
+  height: 24px;
+  margin: 8px 20px;
+}
+
+.kasir-text {
+  /* Kasir */
+
+  width: 33px;
+  height: 24px;
+  margin: 10px 0px;
+
+  /* medium strong */
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: center;
+
+  /* text-inverted */
+
+  color: #ffffff;
+}
+
+.inventory-icon {
+  width: 20px;
+  height: 20px;
+  margin: 8px 22px;
+}
+
+.dropdown-up {
+  margin-top: -8px;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.dropdown-up:active {
+  height: 400px;
+}
+
+.stok-text {
+  /* Stok barang */
+
+  position: static;
+  width: 76px;
+  height: 24px;
+  margin: 8px 64px;
+
+  /* medium */
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  white-space: nowrap;
+
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: center;
+
+  /* text-inverted */
+
+  color: #ffffff;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* =====================Stok Barang===================== */
+
+.stokbarang {
+  margin: 0px 0px -30px 230px;
+}
+
+.arrow {
+  margin: 34px 10px 0px 7px;
+  position: fixed;
+}
+
+.faktur-text {
+  /* Faktur pembelian */
+
+  position: static;
+  width: 108px;
+  height: 24px;
+  margin: 32px 40px 0px 22px;
+
+  /* medium */
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: center;
+
+  /* text-primary */
+
+  color: #3a4f62;
+}
+
+.catat-text {
+  /* Catat faktur pembelian */
+
+  position: static;
+  width: 378px;
+  height: 52px;
+  margin: 0px 0px 0px 0px;
+
+  /* title-xlarge */
+
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 52px;
+  /* identical to box height, or 162% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.05em;
+
+  /* text-primary */
+
+  color: #3a4f62;
+}
+
+.card-first {
+  width: 498px;
+  height: 206px;
+}
+
+.card-second {
+  width: 1019px;
+  height: 410px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
