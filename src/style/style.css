@@ -183,15 +183,6 @@ body {
   margin: 8px 22px;
 }
 
-.dropdown-up {
-  margin-top: -8px;
-  transition: width 2s, height 2s, transform 2s;
-}
-
-.dropdown-up:active {
-  height: 400px;
-}
-
 .stok-text {
   /* Stok barang */
 

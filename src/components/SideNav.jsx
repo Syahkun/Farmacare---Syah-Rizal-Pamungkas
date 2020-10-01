@@ -1,66 +1,76 @@
 import React, { useState } from "react";
+import { Collapse, Container, Row, Col } from "react-bootstrap";
 
 const SideNav = () => {
-  let [isOpen, setIsOpen] = useState(false);
+  // let [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  let [color, setColor] = useState("");
+  let buttonColor = {
+    backgroundColor: color,
+  };
 
   return (
     <div className="sidenav">
-      <div className="container">
-        <div className="row">
+      <Container>
+        <Row>
           <img
             className="logo"
             src={require("../images/logo_white.png")}
             alt=""
           />
           <p className="apotek-text">Apotek Rizal</p>
-        </div>
-        <div className="row">
+        </Row>
+        <Row>
           <img
             className="eclipse"
             src={require("../images/Ellipse.png")}
             alt=""
           />
           <p className="username">Rizal</p>
-        </div>
-        <div className="row pointer">
+        </Row>
+        <Row className="pointer">
           <img className="pos" src={require("../images/pos.png")} alt="" />
           <p className="kasir-text">Kasir</p>
-        </div>
-        <div
-          className="row pointer"
-          onClick={() => setIsOpen(isOpen ? (isOpen = false) : (isOpen = true))}
-        >
+        </Row>
+        <Row className="pointer" onClick={() => setOpen(!open)}>
           <img
             className="inventory-icon"
             src={require("../images/inventory.png")}
             alt=""
           />
           <p className="kasir-text">Inventori</p>
-        </div>
-        <h1>{isOpen}</h1>
-        {isOpen ? (
-          <div className="dropdown-up  w3-animate-top">
-            <div className="row pointer">
+        </Row>
+
+        <Collapse in={open}>
+          <div className="dropdown-up">
+            <Row
+              className="pointer"
+              style={buttonColor}
+              onClick={() => setColor((color = "#0b93a2"))}
+            >
               <p className="stok-text">Stok barang</p>
-            </div>
-            <div className="row pointer">
+            </Row>
+            <Row
+              className="pointer"
+              style={buttonColor}
+              onClick={() => setColor((color = "#0b93a2"))}
+            >
               <p className="stok-text">Faktur Pembelian</p>
-            </div>
-            <div className="row pointer">
+            </Row>
+            <Row className="pointer">
               <p className="stok-text">PBF</p>
-            </div>
-            <div className="row pointer">
+            </Row>
+            <Row className="pointer">
               <p className="stok-text">Stok opnam</p>
-            </div>
+            </Row>
           </div>
-        ) : (
-          <></>
-        )}
-        <div className="row pointer">
+        </Collapse>
+
+        <Row className="pointer">
           <img className="pos" src={require("../images/setting.png")} alt="" />
           <p className="kasir-text">Pengaturan</p>
-        </div>
-      </div>
+        </Row>
+      </Container>
     </div>
   );
 };
