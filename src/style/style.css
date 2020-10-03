@@ -47,12 +47,13 @@ body {
   margin-bottom: 30px;
 }
 
-.margin-l {
-  margin-left: -45px;
-}
-
 .margin-t {
   margin-top: 15px;
+}
+
+.m-l {
+  margin: 0px 0px 0px 220px;
+  padding-right: 40px;
 }
 
 .inline-text {
@@ -63,9 +64,29 @@ body {
   text-align: left;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.no-border {
+  border: 0px;
+}
+
+.no-color {
+  background-color: white;
+}
+
+.no:hover {
+  border-color: white;
+}
+
 /* =====================sidenav===================== */
 .sidenav {
-  height: 866px;
+  height: 100%;
   width: 200px;
   position: fixed;
   z-index: 1;
@@ -239,10 +260,6 @@ body {
 
 /* =====================Stok Barang===================== */
 
-.stokbarang {
-  margin: 0px 0px -30px 230px;
-}
-
 .arrow {
   margin: 34px 10px 0px 7px;
   position: fixed;
@@ -299,8 +316,7 @@ body {
   color: #3a4f62;
 }
 
-.card-first {
-  width: 498px;
+.card-top {
   height: 206px;
 }
 
@@ -309,4 +325,99 @@ body {
   height: 410px;
   margin-left: 15px;
   margin-top: 10px;
+}
+
+.padding-card {
+  padding: 0px 10px 0px 10px;
+}
+
+.col-card {
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.input-card {
+  height: calc(1.5em + 0.75rem + 12px);
+  width: 100%;
+  padding: 0.375rem 0.35rem;
+  border-radius: 5px;
+
+  /* font */
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.input-join {
+  display: contents;
+}
+
+.limit-right {
+  padding-right: 0px;
+}
+
+.limit-left {
+  padding-left: 0px;
+}
+
+.input-join-left {
+  /* font */
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+
+  height: calc(1.5em + 0.75rem + 12px);
+  width: 100%;
+  padding: 0.375rem 0.35rem;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.input-join-right {
+  /* font */
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+
+  height: calc(1.5em + 0.75rem + 12px);
+  width: 100%;
+  padding: 0.375rem 0.35rem;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.text-input-spartan {
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  color: #3a4f62;
+}
+
+.text-v {
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  line-height: 45px;
+  color: #3a4f62;
+  margin-bottom: 0rem;
+}
+
+.position-text-v {
+  padding-right: 3px;
+  justify-content: flex-end;
+  display: flex;
 }
