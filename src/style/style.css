@@ -14,6 +14,18 @@ body {
   user-select: none;
 }
 
+.shadow-box {
+  box-shadow: 0px 1px 2px rgba(58, 79, 98, 0.2);
+}
+
+.show {
+  z-index: 10089;
+}
+
+.radius {
+  border-radius: 10px;
+}
+
 .font-tabel {
   /* title-small */
 
@@ -44,7 +56,7 @@ body {
 }
 
 .margin-b {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .margin-t {
@@ -54,6 +66,10 @@ body {
 .m-l {
   margin: 0px 0px 0px 220px;
   padding-right: 40px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
 }
 
 .inline-text {
@@ -85,6 +101,20 @@ body {
 }
 
 /* =====================sidenav===================== */
+
+.sidenav---sidenav---_2tBP.sidenav---expanded---1KdUL {
+  min-width: 200px;
+}
+
+.user-text {
+  /* medium strong */
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 .sidenav {
   height: 100%;
   width: 200px;
@@ -260,9 +290,24 @@ body {
 
 /* =====================Stok Barang===================== */
 
+.pos-input-top {
+  margin: 10px 18px 10px 18px;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.text-input-nunito {
+  /* medium */
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
 .arrow {
-  margin: 34px 10px 0px 7px;
-  position: fixed;
+  margin: 34px 10px 0px 17px;
+  position: absolute;
 }
 
 .faktur-text {
@@ -271,7 +316,7 @@ body {
   position: static;
   width: 108px;
   height: 24px;
-  margin: 32px 40px 0px 22px;
+  margin: 32px 40px 0px 34px;
 
   /* medium */
 
@@ -294,6 +339,7 @@ body {
   /* Catat faktur pembelian */
 
   position: static;
+  margin-left: 16px;
   width: 378px;
   height: 52px;
   margin: 0px 0px 0px 0px;
@@ -305,8 +351,6 @@ body {
   font-weight: bold;
   font-size: 32px;
   line-height: 52px;
-  /* identical to box height, or 162% */
-
   display: flex;
   align-items: center;
   letter-spacing: -0.05em;
@@ -317,7 +361,7 @@ body {
 }
 
 .card-top {
-  height: 206px;
+  margin-top: 10px;
 }
 
 .card-second {
@@ -419,5 +463,89 @@ body {
 .position-text-v {
   padding-right: 3px;
   justify-content: flex-end;
+  display: flex;
+}
+
+.calender {
+  font-size: 11px;
+  position: absolute;
+  font-family: Nunito Sans;
+  display: inline-table;
+}
+
+.btn-position {
+  margin: 10px 0px 10px 0px;
+}
+
+.btn-style {
+  /* button/primary/default */
+
+  /* Auto Layout */
+
+  padding: 0px 16px 0px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: static;
+  height: 40px;
+  right: 0px;
+  top: 0px;
+
+  /* link */
+
+  background: #13c2cd;
+  /* link-hover */
+
+  border: 1px solid #0b93a2;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  /* font */
+  /* title-small */
+
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.05em;
+}
+
+.btn-style:hover {
+  color: #13c2cd;
+  background: white;
+  border: 2px solid #0b93a2;
+}
+
+.split {
+  width: 8px;
+}
+
+.margin-tc {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.border-c {
+  border-top: solid rgba(58, 79, 98, 0.2) 1px;
+}
+
+.padd-t {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.margin-i {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.join {
+  justify-content: center;
   display: flex;
 }

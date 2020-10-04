@@ -1,78 +1,99 @@
-import React, { useState } from "react";
-import { Collapse, Container, Row, Col } from "react-bootstrap";
+import React from "react";
+import SideNav, { NavItem, NavIcon, NavText } from "@trendmicro/react-sidenav";
+// Be sure to include styles at some point, probably during your bootstraping
+import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 
-const SideNav = () => {
-  // let [isOpen, setIsOpen] = useState(false);
-  const [open, setOpen] = useState(false);
-  let [color, setColor] = useState("");
-  let buttonColor = {
-    backgroundColor: color,
-  };
-
+const SideNavbar = (props) => {
   return (
-    <div className="sidenav">
-      <Container>
-        <Row>
-          <img
-            className="logo"
-            src={require("../images/logo_white.png")}
-            alt=""
-          />
-          <p className="apotek-text">Apotek Rizal</p>
-        </Row>
-        <Row>
-          <img
-            className="eclipse"
-            src={require("../images/Ellipse.png")}
-            alt=""
-          />
-          <p className="username">Rizal</p>
-        </Row>
-        <Row className="pointer">
-          <img className="pos" src={require("../images/pos.png")} alt="" />
-          <p className="kasir-text">Kasir</p>
-        </Row>
-        <Row className="pointer" onClick={() => setOpen(!open)}>
-          <img
-            className="inventory-icon"
-            src={require("../images/inventory.png")}
-            alt=""
-          />
-          <p className="kasir-text">Inventori</p>
-        </Row>
-
-        <Collapse in={open}>
-          <div className="dropdown-up">
-            <Row
-              className="pointer"
-              style={buttonColor}
-              onClick={() => setColor((color = "#0b93a2"))}
-            >
-              <p className="stok-text">Stok barang</p>
-            </Row>
-            <Row
-              className="pointer"
-              style={buttonColor}
-              onClick={() => setColor((color = "#0b93a2"))}
-            >
-              <p className="stok-text">Faktur Pembelian</p>
-            </Row>
-            <Row className="pointer">
-              <p className="stok-text">PBF</p>
-            </Row>
-            <Row className="pointer">
-              <p className="stok-text">Stok opnam</p>
-            </Row>
-          </div>
-        </Collapse>
-
-        <Row className="pointer">
-          <img className="pos" src={require("../images/setting.png")} alt="" />
-          <p className="kasir-text">Pengaturan</p>
-        </Row>
-      </Container>
-    </div>
+    <SideNav
+      style={{
+        minWidth: props.minWidth,
+        height: "100%",
+        position: "fixed",
+        backgroundColor: "#333951",
+      }}
+      onSelect={(selected) => {
+        // Add your code here
+      }}
+    >
+      <SideNav.Toggle onClick={props.statusExpand} />
+      <SideNav.Nav>
+        <NavItem eventKey="home">
+          <NavIcon style={{ display: "none" }}></NavIcon>
+          <NavText>
+            <img
+              className="logo"
+              src={require("../images/logo_white.png")}
+              alt=""
+            />
+          </NavText>
+        </NavItem>
+        <NavItem eventKey="store">
+          <NavIcon style={{ display: "none" }}>
+            <i
+              className="fa fa-fw fa-line-chart"
+              style={{ fontSize: "1.75em" }}
+            />
+          </NavIcon>
+          <NavText>
+            <p className="apotek-text">Apotek Rizal</p>
+          </NavText>
+        </NavItem>
+        <NavItem eventKey="profile">
+          <NavIcon>
+            <img
+              className="eclipse"
+              src={require("../images/Ellipse.png")}
+              alt=""
+            />
+          </NavIcon>
+          <NavText className="text-user">Rizal</NavText>
+        </NavItem>
+        <NavItem eventKey="kasir">
+          <NavIcon>
+            <img className="pos" src={require("../images/pos.png")} alt="" />
+          </NavIcon>
+          <NavText>Kasir</NavText>
+        </NavItem>
+        <NavItem eventKey="inventori">
+          <NavIcon>
+            <img
+              className="inventory-icon"
+              src={require("../images/inventory.png")}
+              alt=""
+            />
+          </NavIcon>
+          <NavText>Inventori</NavText>
+          <NavItem eventKey="store/linechart">
+            <NavIcon></NavIcon>
+            <NavText>Stok barang</NavText>
+          </NavItem>
+          <NavItem eventKey="store/barchart">
+            <NavIcon></NavIcon>
+            <NavText>Faktur Pembelian</NavText>
+          </NavItem>
+          <NavItem eventKey="store/linechart">
+            <NavIcon></NavIcon>
+            <NavText>PBF</NavText>
+          </NavItem>
+          <NavItem eventKey="store/linechart">
+            <NavIcon></NavIcon>
+            <NavText>Stok opnam</NavText>
+          </NavItem>
+        </NavItem>
+        <NavItem eventKey="setting">
+          <NavIcon>
+            <img
+              className="pos"
+              src={require("../images/setting.png")}
+              alt=""
+            />
+          </NavIcon>
+          <NavText>Pengaturan</NavText>
+        </NavItem>
+      </SideNav.Nav>
+    </SideNav>
   );
 };
 
-export default SideNav;
+export default SideNavbar;
