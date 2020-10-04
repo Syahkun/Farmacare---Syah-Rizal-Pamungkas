@@ -48,7 +48,7 @@ const StokBarang = (props) => {
                 Batal
               </Button>
               <div class="split"></div>
-              <Button className="btn-style" variant="primary">
+              <Button className="btn-style" variant="primary" type="submit">
                 Simpan faktur
               </Button>
             </Row>
@@ -179,144 +179,167 @@ const StokBarang = (props) => {
           <Col>
             <Card className="padding-card shadow-box margin-tc ">
               <Card.Body>
-                <Form>
-                  <Row>
-                    <Col sm={12} lg={6}>
-                      <Row>
-                        <Col md={4} className="col-card">
+                <Row>
+                  <Col sm={12} lg={6}>
+                    <Row>
+                      <Col md={4} className="col-card">
+                        <Form.Label className="text-input-spartan">
+                          Barang
+                        </Form.Label>
+                        <Form.Control
+                          placeholder="Nama Barang"
+                          className="input-card margin-i"
+                        />
+                      </Col>
+                      <Col md={3} className="col-card">
+                        <Form.Label className="text-input-spartan">
+                          Batch
+                        </Form.Label>
+                        <Form.Control
+                          placeholder="Batch"
+                          className="input-card margin-i"
+                        />
+                      </Col>
+                      <div className="input-join">
+                        <Col lg={2} className="col-card limit-right">
                           <Form.Label className="text-input-spartan">
-                            Barang
+                            ED
                           </Form.Label>
-                          <Form.Control
-                            placeholder="Nama Barang"
-                            className="input-card margin-i"
-                          />
+                          <div className="join">
+                            <Form.Control
+                              placeholder="MM"
+                              className="input-join-left text-center margin-i"
+                            />
+                            <Form.Control
+                              placeholder="YY"
+                              className="input-join-right text-center margin-i"
+                            />
+                          </div>
                         </Col>
-                        <Col md={3} className="col-card">
-                          <Form.Label className="text-input-spartan">
-                            Batch
-                          </Form.Label>
-                          <Form.Control
-                            placeholder="Batch"
-                            className="input-card margin-i"
-                          />
-                        </Col>
-                        <div className="input-join">
-                          <Col lg={2} className="col-card limit-right">
-                            <Form.Label className="text-input-spartan">
-                              ED
-                            </Form.Label>
-                            <div className="join">
-                              <Form.Control
-                                placeholder="MM"
-                                className="input-join-left text-center margin-i"
-                              />
-                              <Form.Control
-                                placeholder="YY"
-                                className="input-join-right text-center margin-i"
-                              />
-                            </div>
-                          </Col>
-                        </div>
-                        <Col md={3} className="col-card">
-                          <Form.Label className="text-input-spartan">
-                            Harga @
-                          </Form.Label>
-                          <Form.Control
-                            placeholder="IDR"
-                            className="input-card margin-i"
-                          />
-                        </Col>
-                      </Row>
-                    </Col>
-                    <Col>
-                      <Row>
-                        <Col md={1} className="col-card">
-                          <Form.Label className="text-input-spartan">
-                            Qty
-                          </Form.Label>
+                      </div>
+                      <Col md={3} className="col-card">
+                        <Form.Label className="text-input-spartan">
+                          Harga @
+                        </Form.Label>
+                        <Form.Control
+                          placeholder="IDR"
+                          className="input-card margin-i"
+                        />
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col>
+                    <Row>
+                      <Col md={1} className="col-card">
+                        <Form.Label className="text-input-spartan">
+                          Qty
+                        </Form.Label>
+                        <Form.Control
+                          placeholder="0"
+                          className="input-card text-right margin-i"
+                        />
+                      </Col>
+                      <Col md={5} className="col-card">
+                        <Form.Label className="text-input-spartan">
+                          Satuan
+                        </Form.Label>
+                        <Form.Control
+                          as="select"
+                          className="input-card margin-i"
+                        >
+                          <option></option>
+                        </Form.Control>
+                      </Col>
+                      <Col md={3} className="col-card">
+                        <Form.Label className="text-input-spartan">
+                          Diskon
+                        </Form.Label>
+                        <InputGroup>
+                          <InputGroup.Prepend>
+                            <Form.Control
+                              as="select"
+                              className="input-join-left margin-i"
+                            >
+                              <option>%&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            </Form.Control>
+                          </InputGroup.Prepend>
                           <Form.Control
                             placeholder="0"
-                            className="input-card text-right margin-i"
+                            className="input-join-right text-right margin-i"
                           />
-                        </Col>
-                        <Col md={5} className="col-card">
-                          <Form.Label className="text-input-spartan">
-                            Satuan
-                          </Form.Label>
+                        </InputGroup>
+                      </Col>
+                      <Col className="col-card">
+                        <Form.Label className="text-input-spartan">
+                          Subtotal
+                        </Form.Label>
+                        <InputGroup>
+                          <InputGroup.Prepend>
+                            <InputGroup.Text className="input-card no-border no-color">
+                              IDR
+                            </InputGroup.Text>
+                          </InputGroup.Prepend>
                           <Form.Control
-                            as="select"
-                            className="input-card margin-i"
-                          >
-                            <option></option>
-                          </Form.Control>
-                        </Col>
-                        <Col md={3} className="col-card">
-                          <Form.Label className="text-input-spartan">
-                            Diskon
-                          </Form.Label>
-                          <InputGroup>
-                            <InputGroup.Prepend>
-                              <Form.Control
-                                as="select"
-                                className="input-join-left margin-i"
-                              >
-                                <option>%&nbsp;&nbsp;&nbsp;&nbsp;</option>
-                              </Form.Control>
-                            </InputGroup.Prepend>
+                            placeholder="0"
+                            className="input-card no-border no-color text-right margin-i"
+                          />
+                        </InputGroup>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                {/* limit */}
+                <Row className="padd-t">
+                  <Col md={0} sm={0} lg={6}></Col>
+                  <Col md={12} sm={0} lg={6}>
+                    <Row>
+                      <Col md={1} lg={1} className="col-card"></Col>
+                      <Col md={6} lg={5} className="col-card position-text-v">
+                        <p className="text-v">Subtotal</p>
+                      </Col>
+                      <Col md={2} lg={3} className="col-card"></Col>
+                      <Col className="col-card">
+                        <InputGroup>
+                          <InputGroup.Prepend>
+                            <InputGroup.Text className="input-card no-border no-color">
+                              IDR
+                            </InputGroup.Text>
+                          </InputGroup.Prepend>
+                          <Form.Control
+                            placeholder="0"
+                            className="input-card no-border no-color text-right"
+                          />
+                        </InputGroup>
+                      </Col>
+                    </Row>
+                    <Row className="padd-t">
+                      <Col md={1} lg={1} className="col-card"></Col>
+                      <Col md={6} lg={5} className="col-card position-text-v">
+                        <p className="text-v">Diskon Pembelian</p>
+                      </Col>
+                      <Col md={2} lg={3} className="col-card"></Col>
+                      <Col className="col-card">
+                        <InputGroup>
+                          <InputGroup.Prepend>
                             <Form.Control
-                              placeholder="0"
-                              className="input-join-right text-right margin-i"
-                            />
-                          </InputGroup>
-                        </Col>
-                        <Col className="col-card">
-                          <Form.Label className="text-input-spartan">
-                            Subtotal
-                          </Form.Label>
-                          <InputGroup>
-                            <InputGroup.Prepend>
-                              <InputGroup.Text className="input-card no-border no-color">
-                                IDR
-                              </InputGroup.Text>
-                            </InputGroup.Prepend>
-                            <Form.Control
-                              placeholder="0"
-                              className="input-card no-border no-color text-right margin-i"
-                            />
-                          </InputGroup>
-                        </Col>
-                      </Row>
-                    </Col>
-                  </Row>
-                  {/* limit */}
-                  <Row className="padd-t">
-                    <Col md={0} sm={0} lg={6}></Col>
-                    <Col md={12} sm={0} lg={6}>
-                      <Row>
-                        <Col md={1} lg={1} className="col-card"></Col>
-                        <Col md={6} lg={5} className="col-card position-text-v">
-                          <p className="text-v">Subtotal</p>
-                        </Col>
-                        <Col md={2} lg={3} className="col-card"></Col>
-                        <Col className="col-card">
-                          <InputGroup>
-                            <InputGroup.Prepend>
-                              <InputGroup.Text className="input-card no-border no-color">
-                                IDR
-                              </InputGroup.Text>
-                            </InputGroup.Prepend>
-                            <Form.Control
-                              placeholder="0"
-                              className="input-card no-border no-color text-right"
-                            />
-                          </InputGroup>
-                        </Col>
-                      </Row>
+                              as="select"
+                              className="input-join-left"
+                            >
+                              <option>%&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            </Form.Control>
+                          </InputGroup.Prepend>
+                          <Form.Control
+                            placeholder="0"
+                            className="input-join-right text-right"
+                          />
+                        </InputGroup>
+                      </Col>
+                    </Row>
+                    {props.openDiskon === "true" ? (
                       <Row className="padd-t">
                         <Col md={1} lg={1} className="col-card"></Col>
                         <Col md={6} lg={5} className="col-card position-text-v">
-                          <p className="text-v">Diskon Pembelian</p>
+                          <p className="text-v">Diskon Pembayaran</p>
                         </Col>
                         <Col md={2} lg={3} className="col-card"></Col>
                         <Col className="col-card">
@@ -336,117 +359,14 @@ const StokBarang = (props) => {
                           </InputGroup>
                         </Col>
                       </Row>
-                      {props.openDiskon === "true" ? (
-                        <Row className="padd-t">
-                          <Col md={1} lg={1} className="col-card"></Col>
-                          <Col
-                            md={6}
-                            lg={5}
-                            className="col-card position-text-v"
-                          >
-                            <p className="text-v">Diskon Pembayaran</p>
-                          </Col>
-                          <Col md={2} lg={3} className="col-card"></Col>
-                          <Col className="col-card">
-                            <InputGroup>
-                              <InputGroup.Prepend>
-                                <Form.Control
-                                  as="select"
-                                  className="input-join-left"
-                                >
-                                  <option>%&nbsp;&nbsp;&nbsp;&nbsp;</option>
-                                </Form.Control>
-                              </InputGroup.Prepend>
-                              <Form.Control
-                                placeholder="0"
-                                className="input-join-right text-right"
-                              />
-                            </InputGroup>
-                          </Col>
-                        </Row>
-                      ) : (
-                        false
-                      )}
-                      {props.openPpn === "true" ? (
-                        <Row className="border-c padd-t">
-                          <Col md={1} lg={1} className="col-card"></Col>
-                          <Col
-                            md={6}
-                            lg={5}
-                            className="col-card position-text-v"
-                          >
-                            <p className="text-v">DPP</p>
-                          </Col>
-                          <Col md={2} lg={3} className="col-card"></Col>
-                          <Col className="col-card">
-                            <InputGroup>
-                              <InputGroup.Prepend>
-                                <InputGroup.Text className="input-card no-border no-color">
-                                  IDR
-                                </InputGroup.Text>
-                              </InputGroup.Prepend>
-                              <Form.Control
-                                placeholder="0"
-                                className="input-card no-border no-color text-right"
-                              />
-                            </InputGroup>
-                          </Col>
-                        </Row>
-                      ) : (
-                        false
-                      )}
-                      {props.openPpn === "true" ? (
-                        <Row className="padd-t">
-                          <Col md={1} lg={1} className="col-card"></Col>
-                          <Col
-                            md={6}
-                            lg={5}
-                            className="col-card position-text-v"
-                          >
-                            <p className="text-v">PPN</p>
-                          </Col>
-                          <Col md={2} lg={3} className="col-card"></Col>
-                          <Col className="col-card">
-                            <InputGroup>
-                              <InputGroup.Prepend>
-                                <InputGroup.Text className="input-card no-border no-color">
-                                  IDR
-                                </InputGroup.Text>
-                              </InputGroup.Prepend>
-                              <Form.Control
-                                placeholder="0"
-                                className="input-card no-border no-color text-right"
-                              />
-                            </InputGroup>
-                          </Col>
-                        </Row>
-                      ) : (
-                        false
-                      )}
+                    ) : (
+                      false
+                    )}
+                    {props.openPpn === "true" ? (
                       <Row className="border-c padd-t">
                         <Col md={1} lg={1} className="col-card"></Col>
                         <Col md={6} lg={5} className="col-card position-text-v">
-                          <p className="text-v">Biaya Materai</p>
-                        </Col>
-                        <Col md={2} lg={3} className="col-card"></Col>
-                        <Col className="col-card">
-                          <InputGroup>
-                            <InputGroup.Prepend>
-                              <InputGroup.Text className="input-card no-color">
-                                IDR
-                              </InputGroup.Text>
-                            </InputGroup.Prepend>
-                            <Form.Control
-                              placeholder="0"
-                              className="input-card no-color text-right"
-                            />
-                          </InputGroup>
-                        </Col>
-                      </Row>
-                      <Row className="border-c padd-t">
-                        <Col md={1} lg={1} className="col-card"></Col>
-                        <Col md={6} lg={5} className="col-card position-text-v">
-                          <p className="text-v">Total tagihan</p>
+                          <p className="text-v">DPP</p>
                         </Col>
                         <Col md={2} lg={3} className="col-card"></Col>
                         <Col className="col-card">
@@ -463,9 +383,75 @@ const StokBarang = (props) => {
                           </InputGroup>
                         </Col>
                       </Row>
-                    </Col>
-                  </Row>
-                </Form>
+                    ) : (
+                      false
+                    )}
+                    {props.openPpn === "true" ? (
+                      <Row className="padd-t">
+                        <Col md={1} lg={1} className="col-card"></Col>
+                        <Col md={6} lg={5} className="col-card position-text-v">
+                          <p className="text-v">PPN</p>
+                        </Col>
+                        <Col md={2} lg={3} className="col-card"></Col>
+                        <Col className="col-card">
+                          <InputGroup>
+                            <InputGroup.Prepend>
+                              <InputGroup.Text className="input-card no-border no-color">
+                                IDR
+                              </InputGroup.Text>
+                            </InputGroup.Prepend>
+                            <Form.Control
+                              placeholder="0"
+                              className="input-card no-border no-color text-right"
+                            />
+                          </InputGroup>
+                        </Col>
+                      </Row>
+                    ) : (
+                      false
+                    )}
+                    <Row className="border-c padd-t">
+                      <Col md={1} lg={1} className="col-card"></Col>
+                      <Col md={6} lg={5} className="col-card position-text-v">
+                        <p className="text-v">Biaya Materai</p>
+                      </Col>
+                      <Col md={2} lg={3} className="col-card"></Col>
+                      <Col className="col-card">
+                        <InputGroup>
+                          <InputGroup.Prepend>
+                            <InputGroup.Text className="input-card no-color">
+                              IDR
+                            </InputGroup.Text>
+                          </InputGroup.Prepend>
+                          <Form.Control
+                            placeholder="0"
+                            className="input-card no-color text-right"
+                          />
+                        </InputGroup>
+                      </Col>
+                    </Row>
+                    <Row className="border-c padd-t">
+                      <Col md={1} lg={1} className="col-card"></Col>
+                      <Col md={6} lg={5} className="col-card position-text-v">
+                        <p className="text-v">Total tagihan</p>
+                      </Col>
+                      <Col md={2} lg={3} className="col-card"></Col>
+                      <Col className="col-card">
+                        <InputGroup>
+                          <InputGroup.Prepend>
+                            <InputGroup.Text className="input-card no-border no-color">
+                              IDR
+                            </InputGroup.Text>
+                          </InputGroup.Prepend>
+                          <Form.Control
+                            placeholder="0"
+                            className="input-card no-border no-color text-right"
+                          />
+                        </InputGroup>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
               </Card.Body>
             </Card>
           </Col>
