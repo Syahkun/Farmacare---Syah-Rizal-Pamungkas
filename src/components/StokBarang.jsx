@@ -275,7 +275,7 @@ const StokBarang = (props) => {
                         </Form.Label>
                         <InputGroup>
                           <InputGroup.Prepend>
-                            <InputGroup.Text className="input-card no-border no-color">
+                            <InputGroup.Text className="input-card no-border no-color margin-i">
                               IDR
                             </InputGroup.Text>
                           </InputGroup.Prepend>
