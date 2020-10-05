@@ -38,7 +38,7 @@ const StokBarang = (props) => {
           <p className="faktur-text only-pointer">Faktur pembelian</p>
         </Row>
         <Row className="margin-b ">
-          <Col>
+          <Col xs={12} sm={12} lg={6} md={6}>
             {" "}
             <p className="catat-text">Catat faktur pembelian</p>
           </Col>

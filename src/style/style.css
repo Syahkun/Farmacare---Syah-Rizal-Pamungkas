@@ -340,7 +340,7 @@ body {
 
   position: static;
   margin-left: 16px;
-  width: 378px;
+  /* width: 378px; */
   height: 52px;
   margin: 0px 0px 0px 0px;
 
@@ -350,7 +350,8 @@ body {
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
-  line-height: 52px;
+  /* font-size: 4vw; */
+  /* line-height: 52px; */
   display: flex;
   align-items: center;
   letter-spacing: -0.05em;
@@ -358,6 +359,24 @@ body {
   /* text-primary */
 
   color: #3a4f62;
+}
+
+@media only screen and (max-width: 400px) {
+  .catat-text {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .catat-text {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .catat-text {
+    font-size: 18px;
+  }
 }
 
 .card-top {
