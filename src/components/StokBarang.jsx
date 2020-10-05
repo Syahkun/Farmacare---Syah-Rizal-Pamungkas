@@ -59,32 +59,39 @@ const StokBarang = (props) => {
             <Card className="card-top padding-card shadow-box ">
               <Row>
                 <Col className="pos-input-top">
-                  <Form.Group controlId="validationCustom01">
+                  <Form.Group controlId="validationCustomUsername radius">
                     <Form.Label className="text-input-nunito">
-                      Supplier*
+                      Supplier<span class="color-red">*</span>
                     </Form.Label>
+
                     <Form.Control
-                      requied
-                      placeholder="Suplier"
                       className="input-card"
-                      defaultValue="Penjual Obat Makmur Sejahtera"
+                      type="text"
+                      placeholder="Username"
+                      required
                     />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
+                      Tolong masukan nama Apotik!
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
               </Row>
               <Row>
                 <Col className="pos-input-top">
-                  <Form.Group controlId="validationCustom01">
-                    <Form.Label className="text-input-nunito inline-text">
-                      Nomor Faktur*
+                  <Form.Group controlId="validationCustomNumFaktur radius">
+                    <Form.Label className="text-input-nunito">
+                      Nomor Faktur<span class="color-red">*</span>
                     </Form.Label>
+
                     <Form.Control
-                      requied
-                      placeholder="No. Faktur"
                       className="input-card"
+                      type="text"
+                      placeholder="No. Faktur"
+                      required
                     />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
+                      Tolong masukan Nomer Faktur!
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
                 <Col className="pos-input-top">
@@ -151,7 +158,6 @@ const StokBarang = (props) => {
                         className="input-card"
                         value="2020-05-14"
                       />
-                      <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                     </Form.Group>
                   </Col>
                   <Col className="pos-input-top">
@@ -166,7 +172,6 @@ const StokBarang = (props) => {
                         className="input-card"
                         value="2020-06-14"
                       />
-                      <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                     </Form.Group>
                   </Col>
                 </Row>
@@ -364,7 +369,9 @@ const StokBarang = (props) => {
                       <Form.Group as={Row} controlId="formPlaintextPassword">
                         <Col md={2} lg={1}></Col>
                         <Form.Label column md="4" lg="5">
-                          <p className="text-v text-right">Diskon Pembayaran</p>
+                          <p className="text-v text-right inline-text">
+                            Diskon Pembayaran
+                          </p>
                         </Form.Label>
                         <Col md={2} lg={2}></Col>
                         <Col md="4" lg={4} className="margin-i-d">

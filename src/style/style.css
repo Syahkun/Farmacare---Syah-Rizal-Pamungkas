@@ -650,7 +650,7 @@ h1 {
 .line-card-t {
   z-index: 1;
   border-top: 1px solid rgba(58, 79, 98, 0.2);
-  width: 1086px;
+  width: 1084px;
   position: relative;
   top: 80px;
 }
@@ -658,7 +658,7 @@ h1 {
 .line-card-b {
   z-index: 1;
   border-top: 1px solid rgba(58, 79, 98, 0.2);
-  width: 1086px;
+  width: 1084px;
   position: relative;
   top: 144px;
 }
@@ -687,15 +687,6 @@ h1 {
   left: -2px;
 }
 
-.sidenav---navtext---1AE_f {
-  font-family: Nunito Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  /* line-height: 24px; */
-  color: #ffffff;
-}
-
 @media only screen and (max-width: 1200px) {
   .line-card-t {
     display: none;
@@ -716,4 +707,19 @@ h1 {
   .line-card-sub-b {
     display: none;
   }
+}
+
+.sidenav---sidenav-navitem---uwIJ-:hover {
+  background-color: #13c2cd;
+}
+
+.sidenav---navtext---1AE_f {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.color-red {
+  color: red;
 }
