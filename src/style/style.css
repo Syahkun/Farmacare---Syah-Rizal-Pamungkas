@@ -687,6 +687,15 @@ h1 {
   left: -2px;
 }
 
+.sidenav---navtext---1AE_f {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  /* line-height: 24px; */
+  color: #ffffff;
+}
+
 @media only screen and (max-width: 1200px) {
   .line-card-t {
     display: none;

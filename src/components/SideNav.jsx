@@ -66,19 +66,27 @@ const SideNavbar = (props) => {
           <NavText>Inventori</NavText>
           <NavItem eventKey="store/linechart">
             <NavIcon></NavIcon>
-            <NavText>Stok barang</NavText>
+            <NavText style={{ fontWeight: "500", marginLeft: "37px" }}>
+              Stok barang
+            </NavText>
           </NavItem>
           <NavItem eventKey="store/barchart">
             <NavIcon></NavIcon>
-            <NavText>Faktur Pembelian</NavText>
+            <NavText style={{ fontWeight: "500", marginLeft: "37px" }}>
+              Faktur Pembelian
+            </NavText>
           </NavItem>
           <NavItem eventKey="store/linechart">
             <NavIcon></NavIcon>
-            <NavText>PBF</NavText>
+            <NavText style={{ fontWeight: "500", marginLeft: "37px" }}>
+              PBF
+            </NavText>
           </NavItem>
           <NavItem eventKey="store/linechart">
             <NavIcon></NavIcon>
-            <NavText>Stok opnam</NavText>
+            <NavText style={{ fontWeight: "500", marginLeft: "37px" }}>
+              Stok opnam
+            </NavText>
           </NavItem>
         </NavItem>
         <NavItem eventKey="setting">
