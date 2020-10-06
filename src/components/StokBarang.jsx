@@ -67,7 +67,8 @@ const StokBarang = (props) => {
                     <Form.Control
                       className="input-card"
                       type="text"
-                      placeholder="Username"
+                      placeholder="Nama Apotik Anda"
+                      value="Penjualobat Makmur Sejahtera"
                       required
                     />
                     <Form.Control.Feedback type="invalid">

@@ -12,6 +12,7 @@ body {
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   user-select: none;
+  white-space: nowrap;
 }
 
 .shadow-box {
@@ -595,15 +596,6 @@ body {
   display: flex;
 }
 
-/* .card-body {
-  padding: 0.3rem;
-  padding-top: 20px;
-} */
-
-/* .border-b {
-  border-bottom: solid rgba(58, 79, 98, 0.2) 1px;
-} */
-
 .col-card-qty {
   padding-right: 0px;
   padding-left: 0px;
@@ -722,4 +714,17 @@ h1 {
 
 .color-red {
   color: red;
+}
+
+.text-r {
+  bottom: 15px;
+  top: -1px;
+  position: absolute;
+  right: 158px;
+  color: black;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #3a4f62;
 }

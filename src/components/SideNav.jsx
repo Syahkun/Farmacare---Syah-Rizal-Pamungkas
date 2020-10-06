@@ -46,6 +46,7 @@ const SideNavbar = (props) => {
               src={require("../images/Ellipse.png")}
               alt=""
             />
+            {/* <p className="text-r">R</p> */}
           </NavIcon>
           <NavText className="text-user">Rizal</NavText>
         </NavItem>
